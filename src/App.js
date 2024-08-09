@@ -1,8 +1,9 @@
 import React from 'react'
-// import Accordiion from './Accordiion'
+
 import RandomColor from './RandomColor.js'
 import Accordiion from './projects/Accordiion.jsx'
-// import Signup from './Signup.js'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import Signup from './Signup.js'
 // import BackgroundImage from './BackgroundImage.js'
 
 const App = () => {
@@ -10,12 +11,19 @@ const App = () => {
     <>
       <div className='h-screen w-full flex justify-center bg-gray-300' >
         <div className='' >
-          {/* <BackgroundImage /> */}
-          {/* <Signup /> */}
-          <Accordiion />
-          <RandomColor />
-          
+          <BrowserRouter basename="/">
+            <Routes >
+              {/* <BackgroundImage /> */}
+              {/* <Signup /> */}
+              <Route path="/" element={<Accordiion />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/" element={<Accordiion />} />
+              <Route path="/" element={<Accordiion />} />
+              {/* <Accordiion /> */}
+              {/* <RandomColor /> */}
 
+            </Routes>
+          </BrowserRouter>
         </div>
       </div>
     </>
