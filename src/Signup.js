@@ -13,13 +13,13 @@ const SimpleForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic here
-        console.log('Form data submitted:', formData);
+        alert('Form data submitted:', formData);
     };
 
     return (
-        <div className="max-wlg mx-auto p-6">
+        <div className="w-[65vw] mx-auto p-6">
             <h1 className="text-4xl font-bold mb-6 text-center">Simple Form</h1>
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg text-3xl w-1/4 h-[45vh] m-auto">
+            <form onSubmit={handleSubmit} className="w-1/2 bg-white p-8  rounded-lg shadow-lg text-3xl m-auto">
                 <div className="mb-6 ">
                     <label htmlFor="name" className="block  font-medium text-gray-700">Name</label>
                     <input
@@ -48,7 +48,7 @@ const SimpleForm = () => {
                 </div>
                 <button
                     type="submit"
-                    className=" mt-8 w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-md shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 "
+                    className=" my-8 w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-md shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 "
                 >
                     Submit
                 </button>

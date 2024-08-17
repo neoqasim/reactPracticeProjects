@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import data from './accordiondata'
+import data from '../projects/accordiondata'
 
 const Accordiion = () => {
     const [info, setInfo] = useState([])

@@ -2,30 +2,32 @@ import React from 'react'
 
 import RandomColor from './RandomColor.js'
 import Accordiion from './projects/Accordiion.jsx'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Signup from './Signup.js'
-// import BackgroundImage from './BackgroundImage.js'
+import BackgroundImage from './projects/BackgroundImage.js'
+import Sidebar from './projects/Sidebar.jsx'
+import Testimonials from './projects/Testimonials.jsx'
+
 
 const App = () => {
   return (
     <>
-      <div className='h-screen w-full flex justify-center bg-gray-300' >
-        <div className='' >
-          <BrowserRouter basename="/">
+      <BrowserRouter basename="/">
+        <div className='h-screen w-full flex  bg-gray-300' >
+          <div>  <Sidebar /> </div>
+          <div className='' >
             <Routes >
-              {/* <BackgroundImage /> */}
-              {/* <Signup /> */}
+
               <Route path="/" element={<Accordiion />} />
+              <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/" element={<Accordiion />} />
-              <Route path="/" element={<Accordiion />} />
-              {/* <Accordiion /> */}
-              {/* <RandomColor /> */}
+              <Route path="/random-color-generator" element={<RandomColor />} />
+              <Route path="/bg-changer" element={<BackgroundImage />} />
 
             </Routes>
-          </BrowserRouter>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     </>
   )
 }

@@ -19,9 +19,9 @@ const BackgroundImage = () => {
 
 
     return (
-        <div className='container h-max m-auto p-8 bg-white shadow-lg shadow-gray-400 '>
+        <div className='container  h-max m-auto py-3 px-8 bg-white shadow-lg shadow-gray-400 '>
             <div className='flex flex-col shadow-xl  border border-white '>
-                <img src={images[currentIndex]} alt='Background' className='max-w-full w-full h-[54rem] object-c' />
+                <img src={images[currentIndex]} alt='Background' className='max-w-full w-full h-[50rem] object-cover' />
                 <button onClick={bgChanger} className='px-8 py-3 text-2xl text-white capitalize rounded-md font-bold bg-purple-700 w-max mx-auto my-8'>
                     Change URL
                 </button>
